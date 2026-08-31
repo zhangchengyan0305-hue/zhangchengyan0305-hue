@@ -14,13 +14,14 @@ def generate_svg():
     contributions = data.get('contributions', [])
     total = data.get('total', sum(item.get('count', 0) for item in contributions))
 
-    # GitHub 經典綠色階層
+    # GitHub 經典綠色階層 (0~4)
     colors = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
 
     width = 860
     height = 200
-    box_size = 11
+    box_size = 10
     box_gap = 3
+    col_width = box_size + box_gap  # 每週寬度 = 13px
 
     svg_header = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
   <style>
@@ -32,66 +33,67 @@ def generate_svg():
   <rect width="100%" height="100%" class="bg"/>
   <text x="30" y="28" class="subtext">{total} contributions in the last year</text>
   
-  <text x="15" y="62" class="text">Mon</text>
-  <text x="15" y="88" class="text">Wed</text>
-  <text x="15" y="114" class="text">Fri</text>
-  
-  <g transform="translate(45, 48)">
+  <!-- 星期標籤 -->
+  <text x="15" y="66" class="text">Mon</text>
+  <text x="15" y="92" class="text">Wed</text>
+  <text x="15" y="118" class="text">Fri</text>
 '''
 
-    weeks_xml = ""
-    seen_months = set()
+    # 1. 獨立計算與繪製月份標籤（放在 (45, 42) 起始座標）
+    month_xml = '  <g transform="translate(45, 42)">\n'
+    last_month = ""
 
-    # 每 7 天為一欄（一週）
-    for week_idx in range(0, len(contributions), 7):
-        week_days = contributions[week_idx : week_idx + 7]
-        col = week_idx // 7
-        x_offset = col * (box_size + box_gap)
-
-        # 判斷是否印出月份
-        month_label = ""
-        first_day_date = week_days[0].get('date', '') if week_days else ''
-        if first_day_date:
+    for i in range(0, len(contributions), 7):
+        week_days = contributions[i : i + 7]
+        if not week_days:
+            continue
+        
+        # 取得該週第一天的日期
+        first_day_str = week_days[0].get('date', '')
+        if first_day_str:
             try:
-                dt = datetime.strptime(first_day_date, '%Y-%m-%d')
-                month_key = dt.strftime('%Y-%m')
+                dt = datetime.strptime(first_day_str, '%Y-%m-%d')
                 month_name = dt.strftime('%b')
-
-                if month_key not in seen_months:
-                    seen_months.add(month_key)
-                    month_label = f'<text x="0" y="-10" class="text">{month_name}</text>\n'
+                
+                # 當遇到新月份，且不與上一週相同時，繪製標籤
+                if month_name != last_month:
+                    col_index = i // 7
+                    x_pos = col_index * col_width
+                    month_xml += f'    <text x="{x_pos}" y="0" class="text">{month_name}</text>\n'
+                    last_month = month_name
             except ValueError:
                 pass
+    month_xml += '  </g>\n'
 
-        # 該週的 7 個方格
-        day_rects = ""
-        for day_idx, day in enumerate(week_days):
-            y_offset = day_idx * (box_size + box_gap)
-            level = day.get('level', 0)
-            color = colors[min(level, 4)]
-            day_rects += f'    <rect x="0" y="{y_offset}" width="{box_size}" height="{box_size}" fill="{color}" class="rect"/>\n'
+    # 2. 獨立繪製 53 週方格（放在 (45, 52) 起始座標）
+    grid_xml = '  <g transform="translate(45, 52)">\n'
+    for idx, day in enumerate(contributions):
+        col = idx // 7
+        row = idx % 7
+        x = col * col_width
+        y = row * col_width
+        level = day.get('level', 0)
+        color = colors[min(level, 4)]
+        grid_xml += f'    <rect x="{x}" y="{y}" width="{box_size}" height="{box_size}" fill="{color}" class="rect"/>\n'
+    grid_xml += '  </g>\n'
 
-        # 將「月份標籤」與「7個綠格」統一包在帶有 X 位移的 <g> 群組裡面
-        weeks_xml += f'    <g transform="translate({x_offset}, 0)">\n      {month_label}{day_rects}    </g>\n'
-
-    legend = f'''
-  </g>
-  <g transform="translate({width - 160}, {height - 25})">
+    # 3. 底部 Legend
+    legend_xml = f'''  <g transform="translate({width - 160}, {height - 25})">
     <text x="-30" y="10" class="text">Less</text>
-    <rect x="0" y="0" width="11" height="11" fill="{colors[0]}" class="rect"/>
-    <rect x="15" y="0" width="11" height="11" fill="{colors[1]}" class="rect"/>
-    <rect x="30" y="0" width="11" height="11" fill="{colors[2]}" class="rect"/>
-    <rect x="45" y="0" width="11" height="11" fill="{colors[3]}" class="rect"/>
-    <rect x="60" y="0" width="11" height="11" fill="{colors[4]}" class="rect"/>
+    <rect x="0" y="0" width="10" height="10" fill="{colors[0]}" class="rect"/>
+    <rect x="15" y="0" width="10" height="10" fill="{colors[1]}" class="rect"/>
+    <rect x="30" y="0" width="10" height="10" fill="{colors[2]}" class="rect"/>
+    <rect x="45" y="0" width="10" height="10" fill="{colors[3]}" class="rect"/>
+    <rect x="60" y="0" width="10" height="10" fill="{colors[4]}" class="rect"/>
     <text x="78" y="10" class="text">More</text>
   </g>
 </svg>'''
 
-    svg_content = svg_header + weeks_xml + legend
+    svg_content = svg_header + month_xml + grid_xml + legend_xml
 
     with open('contrib-heatmap.svg', 'w', encoding='utf-8') as f:
         f.write(svg_content)
-    print("Successfully generated clean SVG with grouped transforms!")
+    print("Successfully generated perfectly aligned heatmap SVG!")
 
 if __name__ == '__main__':
     generate_svg()
