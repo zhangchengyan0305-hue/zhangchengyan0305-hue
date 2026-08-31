@@ -39,16 +39,16 @@ def generate_svg():
   <g transform="translate(45, 48)">
 '''
 
-    # 分週渲染 (每 7 天為一欄/一週)
     weeks_xml = ""
     seen_months = set()
 
+    # 每 7 天為一欄（一週）
     for week_idx in range(0, len(contributions), 7):
         week_days = contributions[week_idx : week_idx + 7]
         col = week_idx // 7
         x_offset = col * (box_size + box_gap)
 
-        # 判斷是否要在這一週頂部印出月份標籤
+        # 判斷是否印出月份
         month_label = ""
         first_day_date = week_days[0].get('date', '') if week_days else ''
         if first_day_date:
@@ -59,20 +59,20 @@ def generate_svg():
 
                 if month_key not in seen_months:
                     seen_months.add(month_key)
-                    # 標籤跟隨每週的橫向 x_offset
-                    month_label = f'<text x="{x_offset}" y="-10" class="text">{month_name}</text>\n'
+                    month_label = f'<text x="0" y="-10" class="text">{month_name}</text>\n'
             except ValueError:
                 pass
 
-        # 渲染該週的 7 個方格
+        # 該週的 7 個方格
         day_rects = ""
         for day_idx, day in enumerate(week_days):
             y_offset = day_idx * (box_size + box_gap)
             level = day.get('level', 0)
             color = colors[min(level, 4)]
-            day_rects += f'    <rect x="{x_offset}" y="{y_offset}" width="{box_size}" height="{box_size}" fill="{color}" class="rect"/>\n'
+            day_rects += f'    <rect x="0" y="{y_offset}" width="{box_size}" height="{box_size}" fill="{color}" class="rect"/>\n'
 
-        weeks_xml += month_label + day_rects
+        # 將「月份標籤」與「7個綠格」統一包在帶有 X 位移的 <g> 群組裡面
+        weeks_xml += f'    <g transform="translate({x_offset}, 0)">\n      {month_label}{day_rects}    </g>\n'
 
     legend = f'''
   </g>
@@ -91,7 +91,7 @@ def generate_svg():
 
     with open('contrib-heatmap.svg', 'w', encoding='utf-8') as f:
         f.write(svg_content)
-    print("Successfully generated SVG with correctly offset month labels!")
+    print("Successfully generated clean SVG with grouped transforms!")
 
 if __name__ == '__main__':
     generate_svg()
