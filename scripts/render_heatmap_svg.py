@@ -19,6 +19,8 @@ def generate_svg():
 
     width = 860
     height = 200
+    box_size = 11
+    box_gap = 3
     
     svg_header = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
   <style>
@@ -34,14 +36,12 @@ def generate_svg():
   <text x="15" y="88" class="text">Wed</text>
   <text x="15" y="114" class="text">Fri</text>
   
-  <g transform="translate(45, 42)">
+  <g transform="translate(45, 48)">
 '''
 
-    # 月份標籤邏輯
+    # 正確繪製月份標籤（防止重疊擠壓）
     month_labels = ""
     last_month = ""
-    box_size = 11
-    box_gap = 3
 
     for i in range(0, len(contributions), 7):
         week_date_str = contributions[i].get('date', '')
@@ -52,12 +52,12 @@ def generate_svg():
                 if month_str != last_month:
                     col_index = i // 7
                     x_pos = col_index * (box_size + box_gap)
-                    month_labels += f'<text x="{x_pos}" y="-8" class="text">{month_str}</text>\n'
+                    month_labels += f'    <text x="{x_pos}" y="-10" class="text">{month_str}</text>\n'
                     last_month = month_str
             except ValueError:
                 pass
 
-    # 繪製方格
+    # 繪製綠色方格
     rects = ""
     for idx, day in enumerate(contributions):
         col = idx // 7
@@ -75,7 +75,7 @@ def generate_svg():
     <rect x="0" y="0" width="11" height="11" fill="{colors[0]}" class="rect"/>
     <rect x="15" y="0" width="11" height="11" fill="{colors[1]}" class="rect"/>
     <rect x="30" y="0" width="11" height="11" fill="{colors[2]}" class="rect"/>
-    <rect x="45" y="0" width="11" height="11" fill="{colors[3]}" class="rect"/>
+    <rect x="45" y="0" width="11" height="11" fill="{colors[4]}" class="rect"/>
     <rect x="60" y="0" width="11" height="11" fill="{colors[4]}" class="rect"/>
     <text x="78" y="10" class="text">More</text>
   </g>
@@ -85,7 +85,7 @@ def generate_svg():
 
     with open('contrib-heatmap.svg', 'w', encoding='utf-8') as f:
         f.write(svg_content)
-    print("Successfully generated contrib-heatmap.svg with date labels!")
+    print("Successfully generated clean contrib-heatmap.svg!")
 
 if __name__ == '__main__':
     generate_svg()
