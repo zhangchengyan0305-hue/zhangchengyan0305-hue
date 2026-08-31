@@ -5,7 +5,13 @@
   <code><font color="#58a6ff"><b>zhangchengyan0305-hue@github</b></font>:<font color="#7ee787"><b>~</b></font># ./contributions.sh</code>
 </p>
 
-<img src="./contrib-heatmap.svg?v=6" width="860" />
+<!-- 下方兩張 SVG 左右並排 -->
+<table>
+  <tr>
+    <td valign="top"><img src="./avi-ascii.svg" width="370" /></td>
+    <td valign="top"><img src="./info-card.svg" width="490" /></td>
+  </tr>
+</table>
 
 <br><br>
 
