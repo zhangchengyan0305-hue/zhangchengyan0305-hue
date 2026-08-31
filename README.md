@@ -1,18 +1,18 @@
 <div align="center">
 
-<!-- 1. 貢獻圖標題徽章 -->
-<img src="https://img.shields.org/badge/zhangchengyan0305--hue%40github-~%2Fcontributions.sh-1f2328?style=for-the-badge&logo=gnu-bash&logoColor=00FF66&labelColor=0d1117" alt="Contributions Command" />
-
-<br><br>
+<!-- 1. contributions 指令 -->
+<p align="center">
+  <code><font color="#58a6ff"><b>zhangchengyan0305-hue@github</b></font>:<font color="#7ee787"><b>~</b></font># ./contributions.sh</code>
+</p>
 
 <img src="./contrib-heatmap.svg" width="860" />
 
 <br><br>
 
-<!-- 2. 個人資訊標題徽章 -->
-<img src="https://img.shields.org/badge/zhangchengyan0305--hue%40github-~%2Fwhoami-1f2328?style=for-the-badge&logo=terminal&logoColor=58a6ff&labelColor=0d1117" alt="Whoami Command" />
-
-<br><br>
+<!-- 2. whoami 指令 -->
+<p align="center">
+  <code><font color="#58a6ff"><b>zhangchengyan0305-hue@github</b></font>:<font color="#7ee787"><b>~</b></font># whoami</code>
+</p>
 
 <table>
   <tr>
