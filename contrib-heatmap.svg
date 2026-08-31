@@ -2,18 +2,16 @@
   <style>
     .bg { fill: #0d1117; rx: 6px; stroke: #30363d; stroke-width: 1; }
     .text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 10px; fill: #7d8590; }
-    .subtext { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 12px; fill: #c9d1d9; }
+    .subtext { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 12px; fill: #c9d1d9; font-weight: bold; }
     .rect { rx: 2px; ry: 2px; }
   </style>
   <rect width="100%" height="100%" class="bg"/>
   <text x="30" y="28" class="subtext">0 contributions in the last year</text>
   
-  <!-- 星期標示 -->
   <text x="15" y="62" class="text">Mon</text>
   <text x="15" y="88" class="text">Wed</text>
   <text x="15" y="114" class="text">Fri</text>
   
-  <!-- 月份標示區域 -->
   <g transform="translate(45, 42)">
 <text x="0" y="-8" class="text">Aug</text>
 <text x="14" y="-8" class="text">Oct</text>

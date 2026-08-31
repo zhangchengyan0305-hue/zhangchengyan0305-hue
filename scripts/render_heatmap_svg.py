@@ -14,51 +14,48 @@ def generate_svg():
     contributions = data.get('contributions', [])
     total = data.get('total', sum(item.get('count', 0) for item in contributions))
 
-    # 色彩盤 (0 到 4 級別)
+    # GitHub 經典綠色階層 (0 ~ 4)
     colors = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
 
     width = 860
     height = 200
     
-    # 計算週數與佈局
-    weeks = len(contributions) // 7 + (1 if len(contributions) % 7 != 0 else 0)
-    
     svg_header = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
   <style>
     .bg {{ fill: #0d1117; rx: 6px; stroke: #30363d; stroke-width: 1; }}
     .text {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 10px; fill: #7d8590; }}
-    .subtext {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 12px; fill: #c9d1d9; }}
+    .subtext {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 12px; fill: #c9d1d9; font-weight: bold; }}
     .rect {{ rx: 2px; ry: 2px; }}
   </style>
   <rect width="100%" height="100%" class="bg"/>
   <text x="30" y="28" class="subtext">{total} contributions in the last year</text>
   
-  <!-- 星期標示 -->
   <text x="15" y="62" class="text">Mon</text>
   <text x="15" y="88" class="text">Wed</text>
   <text x="15" y="114" class="text">Fri</text>
   
-  <!-- 月份標示區域 -->
   <g transform="translate(45, 42)">
 '''
 
     # 月份標籤邏輯
     month_labels = ""
     last_month = ""
-    x_offset = 0
     box_size = 11
     box_gap = 3
 
     for i in range(0, len(contributions), 7):
         week_date_str = contributions[i].get('date', '')
         if week_date_str:
-            dt = datetime.strptime(week_date_str, '%Y-%m-%d')
-            month_str = dt.strftime('%b')
-            if month_str != last_month:
-                col_index = i // 7
-                x_pos = col_index * (box_size + box_gap)
-                month_labels += f'<text x="{x_pos}" y="-8" class="text">{month_str}</text>\n'
-                last_month = month_str
+            try:
+                dt = datetime.strptime(week_date_str, '%Y-%m-%d')
+                month_str = dt.strftime('%b')
+                if month_str != last_month:
+                    col_index = i // 7
+                    x_pos = col_index * (box_size + box_gap)
+                    month_labels += f'<text x="{x_pos}" y="-8" class="text">{month_str}</text>\n'
+                    last_month = month_str
+            except ValueError:
+                pass
 
     # 繪製方格
     rects = ""
@@ -71,7 +68,6 @@ def generate_svg():
         color = colors[min(level, 4)]
         rects += f'    <rect x="{x}" y="{y}" width="{box_size}" height="{box_size}" fill="{color}" class="rect"/>\n'
 
-    # Legend (圖例)
     legend = f'''
   </g>
   <g transform="translate({width - 160}, {height - 25})">
@@ -89,7 +85,7 @@ def generate_svg():
 
     with open('contrib-heatmap.svg', 'w', encoding='utf-8') as f:
         f.write(svg_content)
-    print("Successfully updated contrib-heatmap.svg with date labels!")
+    print("Successfully generated contrib-heatmap.svg with date labels!")
 
 if __name__ == '__main__':
     generate_svg()
