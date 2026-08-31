@@ -1,16 +1,34 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**zhangchengyan0305-hue/zhangchengyan0305-hue** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<!-- 頂部標題（終端機風格） -->
+<h3><code>zhangchengyan0305-hue@github ~ $ neofetch</code></h3>
 
-Here are some ideas to get you started:
+<!-- 左右並排區塊 -->
+<table>
+  <tr>
+    <!-- 左欄：你的 ASCII 肖像（隨時可換成你喜歡的字元圖） -->
+    <td valign="top" align="left">
+      <pre>
+   /\_/\
+  ( o.o )
+   > ^ <
+      </pre>
+    </td>
+    <!-- 右欄：Neofetch 個人資訊 -->
+    <td valign="top" align="left">
+      <b>OS</b>: Developer OS<br>
+      <b>Host</b>: GitHub Profile<br>
+      <b>Languages</b>: Python, HTML, CSS, JavaScript<br>
+      <b>Tools</b>: VS Code, Git, GitHub<br>
+    </td>
+  </tr>
+</table>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<br>
+
+<!-- 下方區塊：動態統計卡片 -->
+<h3><code>zhangchengyan0305-hue@github ~ $ cat stats.sh</code></h3>
+
+<img src="https://github-readme-stats.vercel.app/api?username=zhangchengyan0305-hue&show_icons=true&theme=dark" />
+
+</div>
