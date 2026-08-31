@@ -5,7 +5,7 @@
   <code><font color="#58a6ff"><b>zhangchengyan0305-hue@github</b></font>:<font color="#7ee787"><b>~</b></font># ./contributions.sh</code>
 </p>
 
-<img src="./contrib-heatmap.svg?v=2" width="860" />
+<img src="./contrib-heatmap.svg?v=3" width="860" />
 
 <br><br>
 

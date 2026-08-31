@@ -14,7 +14,6 @@ def generate_svg():
     contributions = data.get('contributions', [])
     total = data.get('total', sum(item.get('count', 0) for item in contributions))
 
-    # GitHub 經典綠色階層 (0 ~ 4)
     colors = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
 
     width = 860
@@ -39,21 +38,24 @@ def generate_svg():
   <g transform="translate(45, 48)">
 '''
 
-    # 正確繪製月份標籤（防止重疊擠壓）
+    # 月份標籤 logic：只有跨月份時才印出一次，避免重複重疊
     month_labels = ""
-    last_month = ""
+    seen_months = set()
 
     for i in range(0, len(contributions), 7):
         week_date_str = contributions[i].get('date', '')
         if week_date_str:
             try:
                 dt = datetime.strptime(week_date_str, '%Y-%m-%d')
-                month_str = dt.strftime('%b')
-                if month_str != last_month:
+                # 取得 年-月 key (例如 "2025-09")
+                month_key = dt.strftime('%Y-%m')
+                month_name = dt.strftime('%b')
+                
+                if month_key not in seen_months:
+                    seen_months.add(month_key)
                     col_index = i // 7
                     x_pos = col_index * (box_size + box_gap)
-                    month_labels += f'    <text x="{x_pos}" y="-10" class="text">{month_str}</text>\n'
-                    last_month = month_str
+                    month_labels += f'    <text x="{x_pos}" y="-10" class="text">{month_name}</text>\n'
             except ValueError:
                 pass
 
@@ -75,7 +77,7 @@ def generate_svg():
     <rect x="0" y="0" width="11" height="11" fill="{colors[0]}" class="rect"/>
     <rect x="15" y="0" width="11" height="11" fill="{colors[1]}" class="rect"/>
     <rect x="30" y="0" width="11" height="11" fill="{colors[2]}" class="rect"/>
-    <rect x="45" y="0" width="11" height="11" fill="{colors[4]}" class="rect"/>
+    <rect x="45" y="0" width="11" height="11" fill="{colors[3]}" class="rect"/>
     <rect x="60" y="0" width="11" height="11" fill="{colors[4]}" class="rect"/>
     <text x="78" y="10" class="text">More</text>
   </g>
@@ -85,7 +87,7 @@ def generate_svg():
 
     with open('contrib-heatmap.svg', 'w', encoding='utf-8') as f:
         f.write(svg_content)
-    print("Successfully generated clean contrib-heatmap.svg!")
+    print("Successfully generated clean SVG without overlapping text!")
 
 if __name__ == '__main__':
     generate_svg()
