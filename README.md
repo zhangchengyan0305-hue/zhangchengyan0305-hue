@@ -26,9 +26,9 @@
 
 <br>
 
-<!-- 下方區塊：動態統計卡片（已替換為最穩定、不卡圖的開放伺服器） -->
+<!-- 下方區塊：動態統計卡片（改用相容性最高的 Markdown 圖片格式） -->
 <h3><code>zhangchengyan0305-hue@github ~ $ cat stats.sh</code></h3>
 
-<img src="https://github-readme-stats.vercel.app/api?username=zhangchengyan0305-hue&show_icons=true&theme=dark&locale=cn" />
+![zhangchengyan0305-hue's GitHub stats](https://github-readme-stats-sigma-five.vercel.app/api?username=zhangchengyan0305-hue&show_icons=true&theme=dark)
 
 </div>
