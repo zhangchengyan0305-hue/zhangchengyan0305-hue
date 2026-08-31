@@ -18,24 +18,24 @@
   <text y="39" class="txt line" style="animation-delay: 0.09s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
   <text y="52" class="txt line" style="animation-delay: 0.12s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
   <text y="65" class="txt line" style="animation-delay: 0.15s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-  <text y="78" class="txt line" style="animation-delay: 0.18s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-  <text y="91" class="txt line" style="animation-delay: 0.21s;">@@@@@@@@@@@@@@@@@@@@@@@@@%-*==@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-  <text y="104" class="txt line" style="animation-delay: 0.24s;">@@@@@@@@@@@@@@@@@@@@@@@@#*+-.=*@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-  <text y="117" class="txt line" style="animation-delay: 0.27s;">@@@@@@@@@@@@@@@@@@@@@@@##- +-:: :@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-  <text y="130" class="txt line" style="animation-delay: 0.30s;">@@@@@@@@@@@@@@@@@@@@@@+%=-+ #.. -*:-=@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-  <text y="143" class="txt line" style="animation-delay: 0.33s;">@@@@@@@@@@@@@@@@@@@@:  *@*# *+.:+**#-+.%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-  <text y="156" class="txt line" style="animation-delay: 0.36s;">@@@@@@@@@@@@@@@@@@@@%@@@@@+:=  -. #*+::: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-  <text y="169" class="txt line" style="animation-delay: 0.39s;">@@@@@@@@@@@@@@@@@@+*@@@@@@   @.:=  #=-.- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-  <text y="182" class="txt line" style="animation-delay: 0.42s;">@@@@@@@@@@@@@@@@@@@#@@@@@@@@*-  +  +=-   .@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-  <text y="195" class="txt line" style="animation-delay: 0.45s;">@@@@@@@@@@@@@@@@@@@@%#@@@@@@@@@+:==-:     .@ @@@@@@@@@@@@@@@@@@@@@@@@@</text>
-  <text y="208" class="txt line" style="animation-delay: 0.48s;">@@@@@@@@@@@@@@@@@@@@@==+= @@=*+=-. .         =@@@@@@@@@@@@@@@@@@@@@@@@</text>
-  <text y="221" class="txt line" style="animation-delay: 0.51s;">@@@@@@@@@@@@@@@@@@@@@@.=  -=:%%*-:.          @@@@@@@@@@@@@@@@@@@@@@@@@</text>
-  <text y="234" class="txt line" style="animation-delay: 0.54s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=::..:       -::@@@@@@@@@@@@@@@@@@@@@@@@</text>
-  <text y="247" class="txt line" style="animation-delay: 0.57s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@--....:  @@  :--:-@@@@@@@@@@@@@@@@@@@@@@@</text>
-  <text y="260" class="txt line" style="animation-delay: 0.60s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@ ..      @@@@@@ .. . @@@@@@@@@@@@@@@@@@@@@@</text>
-  <text y="273" class="txt line" style="animation-delay: 0.63s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@       @@@@@@@@@-  .. #@@@@@@@@@@@@@@@@@@@@</text>
-  <text y="286" class="txt line" style="animation-delay: 0.66s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@      @@@@@@@@@@@@     @@@@@@@@@@@@@@@@@@@@</text>
-  <text y="299" class="txt line" style="animation-delay: 0.69s;">@@@@@@@@@@@@@@@@@@@@@@@@@@      @@@@@@@@@@@@@@:     @@@@@@@@@@@@@@@@@@</text>
-  <text y="312" class="txt line" style="animation-delay: 0.72s;">@@@@@@@@@@@@@@@@@@@@@@@@@@     @@@@@@@@@@@@@@@@@    . @@@@@@@@@@@@@@@@</text>
+  <text y="78" class="txt line" style="animation-delay: 0.18s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text y="91" class="txt line" style="animation-delay: 0.21s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text y="104" class="txt line" style="animation-delay: 0.24s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%+@@@@@@@@@@@@@@@@</text>
+  <text y="117" class="txt line" style="animation-delay: 0.27s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ *=@@@@@@@@@@@-.@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text y="130" class="txt line" style="animation-delay: 0.30s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+=+:@@@@@%%@:  @@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text y="143" class="txt line" style="animation-delay: 0.33s;">@@@@@@@@@@@@@@@#%*@@@@@@@@@@@@@@@-=@@@@@@@+.  @@@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text y="156" class="txt line" style="animation-delay: 0.36s;">@@@@@@@@@@@@@@@@@@@@@@===@@@@@%=-.#  ... .  @@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text y="169" class="txt line" style="animation-delay: 0.39s;">@@@@@@@@@@@@@@@@@@@@@@@@ .*@#-%%=:=....  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text y="182" class="txt line" style="animation-delay: 0.42s;">@@@@@@@@@@@@@@@@@@@@@@@@@%    ..:====...@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text y="195" class="txt line" style="animation-delay: 0.45s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@....#.....@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text y="208" class="txt line" style="animation-delay: 0.48s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@..... ....@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text y="221" class="txt line" style="animation-delay: 0.51s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.....-....@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text y="234" class="txt line" style="animation-delay: 0.54s;">@@@@@@@@@@@@@@@@@@@@@@@@@@%:::........ .#::@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text y="247" class="txt line" style="animation-delay: 0.57s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@.:-::........*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text y="260" class="txt line" style="animation-delay: 0.60s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=-. ..-: ..@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text y="273" class="txt line" style="animation-delay: 0.63s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.....-  .....@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text y="286" class="txt line" style="animation-delay: 0.66s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:....:- .....-@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text y="299" class="txt line" style="animation-delay: 0.69s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@@.....=:=-= .. .@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+  <text y="312" class="txt line" style="animation-delay: 0.72s;">@@@@@@@@@@@@@@@@@@@@@@@@@@@@  .% .   .@@    @@@@@@@@@@@@@@@@@@@@@@@@@@</text>
 </g>
 </svg>
