@@ -1,5 +1,5 @@
 def build_info_card(output_path='info-card.svg'):
-    svg_content = """<svg xmlns="http://www.w3.org/2000/svg" width="490" height="300">
+    svg_content = """<svg xmlns="http://www.w3.org/2000/svg" width="530" height="300">
   <style>
     .bg { fill: #0d1117; rx: 6px; stroke: #30363d; stroke-width: 1; }
     .title { font-family: monospace; font-size: 14px; fill: #58a6ff; font-weight: bold; }
@@ -14,11 +14,11 @@ def build_info_card(output_path='info-card.svg'):
   <rect width="100%" height="100%" class="bg"/>
   <g transform="translate(25, 35)">
     <text y="0" class="title row" style="animation-delay: 0.1s;">zhangchengyan0305-hue@github</text>
-    <text y="15" class="val row" style="animation-delay: 0.2s;">-------------------------------</text>
+    <text y="15" class="val row" style="animation-delay: 0.2s;">--------------------------------</text>
     <text y="45" class="row" style="animation-delay: 0.3s;"><tspan class="label">OS: </tspan><tspan class="val">Developer Environment</tspan></text>
-    <text y="70" class="row" style="animation-delay: 0.4s;"><tspan class="label">Role: </tspan><tspan class="val">Software Engineer / Creator</tspan></text>
-    <text y="95" class="row" style="animation-delay: 0.5s;"><tspan class="label">Languages: </tspan><tspan class="val">Python, JavaScript, HTML/CSS</tspan></text>
-    <text y="120" class="row" style="animation-delay: 0.6s;"><tspan class="label">Hobbies: </tspan><tspan class="val">Coding, Automation, Open Source</tspan></text>
+    <text y="70" class="row" style="animation-delay: 0.4s;"><tspan class="label">Role: </tspan><tspan class="val">Customer Quality Engineer (CQE) / Automation Developer</tspan></text>
+    <text y="95" class="row" style="animation-delay: 0.5s;"><tspan class="label">Languages: </tspan><tspan class="val">Python, SQL, Excel VBA, HTML/CSS</tspan></text>
+    <text y="120" class="row" style="animation-delay: 0.6s;"><tspan class="label">Hobbies: </tspan><tspan class="val">Automation, Low-Code (n8n), Computer Vision</tspan></text>
     <text y="145" class="row" style="animation-delay: 0.7s;"><tspan class="label">Status: </tspan><tspan class="val">Building cool stuff 🚀</tspan></text>
   </g>
 </svg>"""
