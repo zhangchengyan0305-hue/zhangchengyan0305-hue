@@ -45,20 +45,20 @@
     <text x="377" y="0" class="text">Jul</text>
     <text x="390" y="0" class="text">Aug</text>
     <text x="403" y="0" class="text">Oct</text>
-    <text x="416" y="0" class="text">Dec</text>
+    <text x="416" y="0" class="text">Nov</text>
     <text x="429" y="0" class="text">Jan</text>
     <text x="442" y="0" class="text">Mar</text>
     <text x="455" y="0" class="text">Apr</text>
     <text x="468" y="0" class="text">Jun</text>
-    <text x="481" y="0" class="text">Aug</text>
+    <text x="481" y="0" class="text">Jul</text>
     <text x="494" y="0" class="text">Sep</text>
     <text x="507" y="0" class="text">Nov</text>
-    <text x="520" y="0" class="text">Jan</text>
+    <text x="520" y="0" class="text">Dec</text>
     <text x="533" y="0" class="text">Feb</text>
     <text x="546" y="0" class="text">Apr</text>
     <text x="559" y="0" class="text">May</text>
     <text x="572" y="0" class="text">Jul</text>
-    <text x="585" y="0" class="text">Sep</text>
+    <text x="585" y="0" class="text">Aug</text>
     <text x="598" y="0" class="text">Oct</text>
     <text x="611" y="0" class="text">Dec</text>
     <text x="624" y="0" class="text">Jan</text>
@@ -226,7 +226,7 @@
     <rect x="286" y="13" width="10" height="10" fill="#161b22" class="rect"/>
     <rect x="286" y="26" width="10" height="10" fill="#161b22" class="rect"/>
     <rect x="286" y="39" width="10" height="10" fill="#161b22" class="rect"/>
-    <rect x="286" y="52" width="10" height="10" fill="#161b22" class="rect"/>
+    <rect x="286" y="52" width="10" height="10" fill="#39d353" class="rect"/>
     <rect x="286" y="65" width="10" height="10" fill="#161b22" class="rect"/>
     <rect x="286" y="78" width="10" height="10" fill="#161b22" class="rect"/>
     <rect x="299" y="0" width="10" height="10" fill="#161b22" class="rect"/>
@@ -435,6 +435,7 @@
     <rect x="676" y="0" width="10" height="10" fill="#161b22" class="rect"/>
     <rect x="676" y="13" width="10" height="10" fill="#161b22" class="rect"/>
     <rect x="676" y="26" width="10" height="10" fill="#161b22" class="rect"/>
+    <rect x="676" y="39" width="10" height="10" fill="#161b22" class="rect"/>
   </g>
   <g transform="translate(700, 175)">
     <text x="-30" y="10" class="text">Less</text>
