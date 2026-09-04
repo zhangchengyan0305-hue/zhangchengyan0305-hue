@@ -62,10 +62,10 @@
     <text x="598" y="0" class="text">Oct</text>
     <text x="611" y="0" class="text">Nov</text>
     <text x="624" y="0" class="text">Jan</text>
-    <text x="637" y="0" class="text">Mar</text>
+    <text x="637" y="0" class="text">Feb</text>
     <text x="650" y="0" class="text">Apr</text>
     <text x="663" y="0" class="text">Jun</text>
-    <text x="676" y="0" class="text">Aug</text>
+    <text x="676" y="0" class="text">Jul</text>
   </g>
   <g transform="translate(45, 52)">
     <rect x="0" y="0" width="10" height="10" fill="#161b22" class="rect"/>
@@ -332,7 +332,7 @@
     <rect x="481" y="26" width="10" height="10" fill="#161b22" class="rect"/>
     <rect x="481" y="39" width="10" height="10" fill="#161b22" class="rect"/>
     <rect x="481" y="52" width="10" height="10" fill="#161b22" class="rect"/>
-    <rect x="481" y="65" width="10" height="10" fill="#161b22" class="rect"/>
+    <rect x="481" y="65" width="10" height="10" fill="#39d353" class="rect"/>
     <rect x="481" y="78" width="10" height="10" fill="#161b22" class="rect"/>
     <rect x="494" y="0" width="10" height="10" fill="#161b22" class="rect"/>
     <rect x="494" y="13" width="10" height="10" fill="#161b22" class="rect"/>
@@ -437,6 +437,7 @@
     <rect x="676" y="26" width="10" height="10" fill="#161b22" class="rect"/>
     <rect x="676" y="39" width="10" height="10" fill="#161b22" class="rect"/>
     <rect x="676" y="52" width="10" height="10" fill="#161b22" class="rect"/>
+    <rect x="676" y="65" width="10" height="10" fill="#161b22" class="rect"/>
   </g>
   <g transform="translate(700, 175)">
     <text x="-30" y="10" class="text">Less</text>
