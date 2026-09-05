@@ -385,7 +385,7 @@
     <rect x="572" y="78" width="10" height="10" fill="#161b22" class="rect"/>
     <rect x="585" y="0" width="10" height="10" fill="#161b22" class="rect"/>
     <rect x="585" y="13" width="10" height="10" fill="#161b22" class="rect"/>
-    <rect x="585" y="26" width="10" height="10" fill="#161b22" class="rect"/>
+    <rect x="585" y="26" width="10" height="10" fill="#39d353" class="rect"/>
     <rect x="585" y="39" width="10" height="10" fill="#161b22" class="rect"/>
     <rect x="585" y="52" width="10" height="10" fill="#161b22" class="rect"/>
     <rect x="585" y="65" width="10" height="10" fill="#161b22" class="rect"/>
@@ -438,6 +438,7 @@
     <rect x="676" y="39" width="10" height="10" fill="#161b22" class="rect"/>
     <rect x="676" y="52" width="10" height="10" fill="#161b22" class="rect"/>
     <rect x="676" y="65" width="10" height="10" fill="#161b22" class="rect"/>
+    <rect x="676" y="78" width="10" height="10" fill="#161b22" class="rect"/>
   </g>
   <g transform="translate(700, 175)">
     <text x="-30" y="10" class="text">Less</text>
